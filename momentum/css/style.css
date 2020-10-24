@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: #ffffff;
+  background: no-repeat center center fixed;
+  background-size: cover;
+}
+
+.containerContent {
+  padding: 20px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 30px;
+  height: 530px;
+}
+
+.time {
+  font-size: 4rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+.quoteSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.quote {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3em;
+  width: 900px;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 1em;
+}
+.quote figcaption {
+  text-align: right;
+}
+
+.btnQuote {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: url("../assets/images/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 20px;
+  margin-top: 35px;
+  transition: transform 0.5s ease;
+}
+
+.btnQuote:hover {
+  cursor: pointer;
+}
+
+.btnQuote:active,
+.btnQuote:focus {
+  outline: 0;
+}
+/*----------------------------------------------------------------------------------------------------------*/
+
+.weather {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 5px;
+  height: 230px;
+}
+
+.city {  
+  width: 240px;
+  padding: 7px 0;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+.container {
+  width: 210px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.weather-description {
+  width: 240px;
+  margin-top: 20px;
+  font-size: 17px;
+  padding: 7px 0;
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 5px;
+}
+
+.weather-icon {
+  margin: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.weather-icon:hover {
+  animation: shake 1.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+.btnBack {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: url("../assets/images/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+  transition: transform 0.5s ease;
+  opacity: 0.4;
+}
+
+.btnBack:hover {
+  cursor: pointer;
+}
+
+.btnBack:active,
+.btnBack:focus {
+  outline: 0;
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+
+  .containerContent {
+    margin-top: 350px;
+  }
+
+  .btnBack {
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .containerContent {
+    margin-top: 420px;
+    width: 600px;
+    height: 460px;
+  }
+
+  .time {
+    padding: 10px;
+    font-size: 3em;
+  }
+
+  .weather {
+    top: 17px;
+    right: 20px;
+    width: 200px;
+    font-size: 1em;
+  }
+  
+  .city {  
+    width: 200px;
+    padding: 7px 0;
+    font-size: 1em;
+  }
+  
+  .weather-description {
+    width: 200px;
+    padding: 7px 0;
+    font-size: 1em;
+    margin-top: 7px;
+  }
+
+  .container {
+    width: 170px;
+    font-size: 1em;
+  }
+  
+  .weather-icon {
+    margin: 10px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .btnQuote {
+    font-size: 2em;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    margin-top: 45px;
+    margin-right: 15px;
+  }
+
+  .quote {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    width: 600px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+
+  blockquote {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 769px) {
+
+  .btnBack {
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .containerContent {
+    margin-top: 470px;
+    width: 300px;
+    height: 560px;
+    margin-bottom: 10px;
+  }
+
+  .time {
+    padding: 10px;
+    font-size: 2em;
+  }
+
+  .weather {
+    top: 17px;
+    right: 20px;
+    width: 200px;
+    font-size: 1em;
+    height: 147px;
+  }
+  
+  .city {  
+    width: 200px;
+    padding: 7px 0;
+    font-size: 1em;
+  }
+  
+  .weather-description {
+    width: 200px;
+    padding: 7px 0;
+    font-size: 1em;
+    margin-top: 7px;
+  }
+
+  .container {
+    width: 170px;
+    font-size: 1em;
+  }
+  
+  .weather-icon {
+    margin: 10px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+
+  .btnQuote {
+    font-size: 2em;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    margin-top: 45px;
+    margin-right: 15px;
+  }
+
+  .quote {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    width: 300px;
+    height: 230px;
+  }
+
+  blockquote {
+    font-size: 14px;
+  }
+}
+
+.rotate {
+  transform: rotate(360deg);
+}
